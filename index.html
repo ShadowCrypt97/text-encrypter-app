@@ -10,21 +10,26 @@
 <body id="body">
     <section id="app">
         <header id="header">
-
+            <div id="header-logo-container">
+                <img class="logo" src="./assets/Logo.png" alt="logo-alura-latam" />
+            </div>
         </header>
         <section id="text-input-container">
-            <input type="text">
+            <input id="input-text" type="text">
         </section>
         <footer id="footer">
             <label for="btn-container"></label>
             <section id="btn-container">
-                <button id="encrypt"></button>
-                <button id="decrypt"></button>
+                <button id="encrypt"> Encrypt </button>
+                <button id="decrypt"> Decrypt </button>
             </section>
         </footer>
     </section>
     <section id="answer-panel">
-
+        <div id="input-container">
+            <input id="output-text" type="text" disabled>
+        </div>
+        <img class="doll" src="./assets/doll.png" alt="no-results-picture" />
     </section>
 </body>
 
