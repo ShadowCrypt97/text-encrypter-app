@@ -1,3 +1,9 @@
+@media screen and (max-width: 1200px) {
+    .img-container {
+        display: none;
+    }
+}
+
 body {
     background-color: #F3F5FC;
     color: #0A3871;
@@ -8,6 +14,15 @@ body {
 html {
     margin: 40px;
     height: 90%;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 #app {
@@ -16,7 +31,7 @@ html {
 }
 
 #text-input-container {
-    height: 80%;
+    height: 100%;
 }
 
 #answer-panel {
@@ -24,6 +39,11 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#text-input-container {
+    width: 100%;
+    height: 100%;
 }
 
 .text-area--text-color {
@@ -37,13 +57,11 @@ html {
 .output-text-title {
     color: #000000;
     font-size: 24px;
-    font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center;
 }
 
 .output-text {
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     text-align: center;
 }
@@ -53,10 +71,14 @@ html {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     border-radius: 32px;
     box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.08);
+}
+
+.app-container {
+    height: 70%;
 }
 
 
@@ -65,7 +87,6 @@ html {
     color: #FFFFFF;
     border: 1px solid #0A3871;
     border-radius: 24px;
-    width: 328px;
     padding: 24px;
 }
 
@@ -75,12 +96,11 @@ html {
     border: 1px solid #0A3871;
     padding: 24px;
     border-radius: 24px;
-    width: 328px;
-
 }
 
 .button-container {
     gap: 24px;
+    margin: 0px;
 }
 
 .label-space {
@@ -98,10 +118,22 @@ html {
     height: 100%;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: none;
     border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
+    background-color: #F3F5FC;
+    font-size: 32px;
+    resize: none;
+}
+
+.text-area:focus-visible {
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #F3F5FC;
+    font-size: 32px;
     resize: none;
 }
 
