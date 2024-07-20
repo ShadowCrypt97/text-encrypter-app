@@ -4,39 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+        type="text/css">
     <link rel="stylesheet" href="style.css">
     <title>Encriptador de texto</title>
 </head>
 
-<body id="body">
-    <section id="app">
+<body id="body" class="row between-xs">
+    <section id="app" class="col-lg-6
+    col-sm-12
+    col-md-12
+    col-xs-12">
         <header id="header">
             <div id="header-logo-container">
                 <img class="logo" src="./assets/Logo.png" alt="logo-alura-latam" />
             </div>
         </header>
-        <main id="text-input-container">
-            <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+        <main id="text-input-container" class="row">
+            <textarea class="text-area text-area--text-color col-xs-12" name="textarea" rows="10"
+                cols="50">Write something here</textarea>
         </main>
         <footer id="footer">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
-                    <path fill="currentColor"
-                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2" />
-                </svg>
-                <label for="btn-container">Only lowercase letters and without accents</label>
-            </div>
-            <section id="btn-container">
-                <a type="button" id="encrypt"> Encrypt </a>
-                <a type="button" id="decrypt" disabled> Decrypt </a>
+            <section id="btn-container" class="row label-space">
+                <div class="col-lg-12
+                col-sm-12
+                col-md-12
+                col-xs-12 row start-xs">
+                    <svg class="svg-color" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                        viewBox="0 0 16 16">
+                        <path fill="currentColor"
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2" />
+                    </svg>
+                    <label class="label-color" for="btn-container">Only lowercase letters and without accents</label>
+                </div>
+                <div class="row center-xs button-container">
+                    <div class="encrypt-button">
+                        <a href="#" type="button" id="encrypt"> Encrypt </a>
+                    </div>
+                    <div class="decrypt-button">
+                        <a href="#" type="button" id="decrypt" disabled> Decrypt </a>
+                    </div>
+                </div>
             </section>
         </footer>
     </section>
-    <section id="answer-panel">
-        <div id="input-container">
-            <input id="output-text" type="text" disabled>
+    <section id="answer-panel" class="col-lg-6
+    col-sm-12
+    col-md-12
+    col-xs-12">
+        <div class="textarea-color output-container">
+            <div class="img-container">
+                <img class="doll" src="./assets/doll.png" alt="no-results-picture" />
+            </div>
+            <div>
+                <p class="output-text-title">Any message was found</p>
+                <p class="output-text--color output-text"> enter the text
+                    that wish encrypt or decrypt
+                </p>
+            </div>
         </div>
-        <img class="doll" src="./assets/doll.png" alt="no-results-picture" />
     </section>
 </body>
 
