@@ -50,17 +50,19 @@
                             without accents</label>
                     </div>
                     <div class="row center-xs button-container">
-                        <div class="encrypt-button col-lg-4
+                        <div id="encrypt-btn-container" class="encrypt-button col-lg-4
                         col-sm-12
                         col-md-12
                         col-xs-12">
-                            <a onclick="encrypt();" href="#" type="button" id="encrypt"> Encrypt </a>
+                            <a class="anchor-button-encrypt" onclick="encrypt();" href="#" type="button" id="encrypt">
+                                Encrypt </a>
                         </div>
-                        <div class="decrypt-button col-lg-4
+                        <div id="decrypt-btn-container" class="decrypt-button decrypt-button-disabled col-lg-4
                         col-sm-12
                         col-md-12
                         col-xs-12">
-                            <a onclick="decrypt();" href="#" type="button" id="decrypt" disabled> Decrypt </a>
+                            <a class="btn-disabled" onclick="decrypt();" href="#" type="button" id="decrypt">
+                                Decrypt </a>
                         </div>
                     </div>
                 </section>
@@ -82,8 +84,13 @@
                 </p>
             </div>
         </div>
-        <div id="response-container" class="textarea-color output-container" style="display: none;">
-            <p id="response" class="output-text--color output-text"></p>
+        <div id="response-container" class="textarea-color output-container response-container" style="display: none;">
+            <div id="output-res-container">
+                <p id="response" class="output-text--color output-text"></p>
+            </div>
+            <div id="button-container" class="copy-button">
+                <a class="btn-copy" onclick="copy();" href="#" type="button" id="copy"> Copy </a>
+            </div>
         </div>
     </section>
 </body>

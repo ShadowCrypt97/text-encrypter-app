@@ -19,12 +19,6 @@ html {
     font-style: normal;
 }
 
-a:link,
-a:visited {
-    text-decoration: none;
-    color: white;
-}
-
 #app {
     gap: 10px;
     justify-content: space-between;
@@ -77,6 +71,10 @@ a:visited {
     box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.08);
 }
 
+.response-container {
+    justify-content: space-around;
+}
+
 .app-container {
     height: 70%;
 }
@@ -91,11 +89,44 @@ a:visited {
 }
 
 .decrypt-button {
+    background-color: #F3F5FC;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.copy-button {
+    background-color: #F3F5FC;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    padding: 24px;
+    border-radius: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.decrypt-button-disabled {
     background-color: #D8DFE8;
     color: #0A3871;
     border: 1px solid #0A3871;
     padding: 24px;
     border-radius: 24px;
+}
+
+.anchor-button-encrypt {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-copy {
+    text-decoration: none;
+    color: #0A3871;
+}
+
+.btn-disabled {
+    text-decoration: none;
+    color: #0A3871;
 }
 
 .button-container {

@@ -1,7 +1,9 @@
 const encryptBtn = document.querySelector("#encrypt");
 const decryptBtn = document.querySelector("#decrypt");
+const decryptBtnContainer = document.querySelector("#decrypt-btn-container");
 const inputText = document.querySelector("#input-textarea");
-const responseContainer = document.querySelector("#response-container");
+const responseContainer = document.querySelector("#output-res-container");
+const outputContainer = document.querySelector("#response-container");
 const responseEmptyContainer = document.querySelector("#response-empty-container");
 const responseText = document.querySelector("#response");
 
@@ -24,11 +26,13 @@ function encrypt(){
     let encryptedText = ""
     if(inputText.value === "Write something here" || inputText.value === ""){
         document.querySelector("#answer-panel").append(responseEmptyContainer);
-        responseContainer.setAttribute("style", "display:none;");
+        outputContainer.setAttribute("style", "display:none;");
+        decryptBtnContainer.setAttribute("class", "decrypt-button decrypt-button-disabled col-lg-4 col-sm-12 col-md-12 col-xs-12");
     }
     else{
         responseEmptyContainer.remove();
-        responseContainer.removeAttribute("style");
+        outputContainer.removeAttribute("style");
+        decryptBtnContainer.setAttribute("class", "decrypt-button col-lg-4 col-sm-12 col-md-12 col-xs-12");
         encryptedText = encryptMessage(inputText.value);
         assignTextResponse(encryptedText);
     }    
@@ -70,4 +74,8 @@ function encryptRules(){
 
 function decrypt(){
 
+}
+
+function copy(){
+    
 }
