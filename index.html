@@ -28,7 +28,8 @@
             col-sm-12
             col-md-12
             col-xs-12">
-                <textarea spellcheck="false" aria-labelledby="label-lowercase" class="text-area text-area--text-color"
+                <textarea onblur="restoreTextArea();" onclick="cleanTextArea();" spellcheck="false"
+                    aria-labelledby="label-lowercase" id="input-textarea" class="text-area text-area--text-color"
                     name="textarea" rows="10" cols="50">Write something here</textarea>
             </main>
             <footer id="footer" class="col-lg-10 col-lg-offset-2
@@ -53,13 +54,13 @@
                         col-sm-12
                         col-md-12
                         col-xs-12">
-                            <a href="#" type="button" id="encrypt"> Encrypt </a>
+                            <a onclick="encrypt();" href="#" type="button" id="encrypt"> Encrypt </a>
                         </div>
                         <div class="decrypt-button col-lg-4
                         col-sm-12
                         col-md-12
                         col-xs-12">
-                            <a href="#" type="button" id="decrypt" disabled> Decrypt </a>
+                            <a onclick="decrypt();" href="#" type="button" id="decrypt" disabled> Decrypt </a>
                         </div>
                     </div>
                 </section>
@@ -70,7 +71,7 @@
     col-sm-12
     col-md-12
     col-xs-12">
-        <div class="textarea-color output-container">
+        <div id="response-empty-container" class="textarea-color output-container">
             <div class="img-container">
                 <img class="doll" src="./assets/doll.png" alt="no-results-picture" />
             </div>
@@ -81,7 +82,11 @@
                 </p>
             </div>
         </div>
+        <div id="response-container" class="textarea-color output-container" style="display: none;">
+            <p id="response" class="output-text--color output-text"></p>
+        </div>
     </section>
 </body>
+<script src="./script.js"></script>
 
 </html>
