@@ -95,6 +95,7 @@ function decryptMessage(encryptedMessage){
     return encryptedMessage;
 }
 
-function copy(){
-    
+async function copy(){
+    await navigator.clipboard.writeText(responseText.textContent);
+    alert("message copied successfully on the clipboard!");
 }
