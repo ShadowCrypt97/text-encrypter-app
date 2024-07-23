@@ -5,6 +5,7 @@ const inputText = document.querySelector("#input-textarea");
 const responseContainer = document.querySelector("#output-res-container");
 const outputContainer = document.querySelector("#response-container");
 const responseEmptyContainer = document.querySelector("#response-empty-container");
+const answerPanel = document.querySelector("#answer-panel");
 const responseText = document.querySelector("#response");
 
 function cleanTextArea(){
@@ -35,6 +36,7 @@ function encrypt(){
         decryptBtnContainer.setAttribute("class", "decrypt-button col-lg-4 col-sm-12 col-md-12 col-xs-12");
         encryptedText = encryptMessage(inputText.value);
         assignTextResponse(encryptedText);
+        inputText.value = "Write something here";
     }    
 }
 
@@ -73,7 +75,24 @@ function encryptRules(){
 }
 
 function decrypt(){
+    if(inputText.value === "Write something here" || inputText.value === ""){
+        outputContainer.setAttribute("style", "display:none;");
+        decryptBtnContainer.setAttribute("class", "decrypt-button decrypt-button-disabled col-lg-4 col-sm-12 col-md-12 col-xs-12");
+        answerPanel.appendChild(responseEmptyContainer);
+    }else{
+        decryptedText = decryptMessage(inputText.value);
+        assignTextResponse(decryptedText);
+        inputText.value = "Write something here";
+    }
+}
 
+function decryptMessage(encryptedMessage){
+    let rules = encryptRules();
+    for (var vowel in  rules) {
+        var regex = new RegExp(rules[vowel], 'g');
+        encryptedMessage = encryptedMessage.replace(regex, vowel);
+    }
+    return encryptedMessage;
 }
 
 function copy(){
