@@ -80,6 +80,8 @@ function decrypt(){
         decryptBtnContainer.setAttribute("class", "decrypt-button decrypt-button-disabled col-lg-4 col-sm-12 col-md-12 col-xs-12");
         answerPanel.appendChild(responseEmptyContainer);
     }else{
+        responseEmptyContainer.remove();
+        outputContainer.removeAttribute("style");
         decryptedText = decryptMessage(inputText.value);
         assignTextResponse(decryptedText);
         inputText.value = "Write something here";
